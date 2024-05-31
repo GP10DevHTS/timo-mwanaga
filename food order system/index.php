@@ -5,7 +5,7 @@ session_start();
 <html>
 
   <head>
-    <title> Home | Le Cafe' </title>
+    <title> Home | Foodie Deliver Mbarara </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
@@ -46,7 +46,7 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Le Cafe'</a>
+          <a class="navbar-brand" href="index.php">Foodie Deliver Mbarara</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">

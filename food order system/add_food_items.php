@@ -10,7 +10,7 @@ header('Location: managerlogin.php');
 <html>
 
   <head>
-    <title> Manager Login | Le Cafe' </title>
+    <title> Manager Login | Foodie Deliver Mbarara </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/add_food_items.css">
@@ -55,7 +55,7 @@ header('Location: managerlogin.php');
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Le Cafe'</a>
+          <a class="navbar-brand" href="index.php">Foodie Deliver Mbarara</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -108,7 +108,7 @@ header('Location: managerlogin.php');
     
     <div class="col-xs-9">
       <div class="form-area" style="padding: 0px 100px 100px 100px;">
-        <form action="add_food_items1.php" method="POST">
+        <form action="add_food_items1.php" method="POST" enctype="multipart/form-data" >
         <br style="clear: both">
           <h3 style="margin-bottom: 25px; text-align: center; font-size: 30px;"> ADD NEW FOOD ITEM HERE </h3>
 
@@ -125,7 +125,7 @@ header('Location: managerlogin.php');
           </div>
 
           <div class="form-group">
-            <input type="text" class="form-control" id="images_path" name="images_path" placeholder="Your Food Image Path [images/<filename>.<extention>]" required="">
+            <input type="file" class="form-control" id="images_path" name="images_path" placeholder="Your Food Image Path [images/<filename>.<extention>]" required="">
           </div>
 
           <div class="form-group">

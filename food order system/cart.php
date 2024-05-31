@@ -10,7 +10,7 @@ header("location: customerlogin.php");
 <html>
 
   <head>
-    <title> Cart | Le Cafe' </title>
+    <title> Cart | Foodie Deliver Mbarara </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/cart.css">
@@ -54,7 +54,7 @@ header("location: customerlogin.php");
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Le Cafe'</a>
+          <a class="navbar-brand" href="index.php">Foodie Deliver Mbarara</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -164,8 +164,8 @@ foreach($_SESSION["cart"] as $keys => $values)
 <tr>
 <td><?php echo $values["food_name"]; ?></td>
 <td><?php echo $values["food_quantity"] ?></td>
-<td>&#8377; <?php echo $values["food_price"]; ?></td>
-<td>&#8377; <?php echo number_format($values["food_quantity"] * $values["food_price"], 2); ?></td>
+<td>UGX <?php echo $values["food_price"]; ?></td>
+<td>UGX <?php echo number_format($values["food_quantity"] * $values["food_price"], 2); ?></td>
 <td><a href="cart.php?action=delete&id=<?php echo $values["food_id"]; ?>"><span class="text-danger">Remove</span></a></td>
 </tr>
 <?php 
@@ -174,7 +174,7 @@ $total = $total + ($values["food_quantity"] * $values["food_price"]);
 ?>
 <tr>
 <td colspan="3" align="right">Total</td>
-<td align="right">&#8377; <?php echo number_format($total, 2); ?></td>
+<td align="right">UGX <?php echo number_format($total, 2); ?></td>
 <td></td>
 </tr>
 </table>

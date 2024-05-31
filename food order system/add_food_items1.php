@@ -20,7 +20,53 @@ $R_IDresult = mysqli_query($conn,$R_IDsql);
 $R_IDrs = mysqli_fetch_array($R_IDresult, MYSQLI_BOTH);
 $R_ID = $R_IDrs['R_ID'];
 
-$images_path = $conn->real_escape_string($_POST['images_path']);
+// $images_path = $conn->real_escape_string($_POST['images_path']);
+
+
+
+
+
+
+if(isset($_FILES['images_path']) && $_FILES['images_path']['error'] == 0) {
+  $target_dir = "images/";
+  $imageFileType = strtolower(pathinfo($_FILES["images_path"]["name"], PATHINFO_EXTENSION));
+  
+  // Generate a unique file name
+  $unique_name = uniqid() . '.' . $imageFileType;
+  $target_file = $target_dir . $unique_name;
+
+  // Check if image file is an actual image or fake image
+  $check = getimagesize($_FILES["images_path"]["tmp_name"]);
+  if($check !== false) {
+      // Check file size (5MB max)
+      if ($_FILES["images_path"]["size"] <= 5000000) {
+          // Allow certain file formats
+          if($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg" || $imageFileType == "gif" ) {
+              if (move_uploaded_file($_FILES["images_path"]["tmp_name"], $target_file)) {
+                  $images_path = $conn->real_escape_string($target_file);
+              } else {
+                  echo "Sorry, there was an error uploading your file.";
+                  exit();
+              }
+          } else {
+              echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+              exit();
+          }
+      } else {
+          echo "Sorry, your file is too large.";
+          exit();
+      }
+  } else {
+      echo "File is not an image.";
+      exit();
+  }
+} else {
+  echo "No file was uploaded or there was an error uploading the file.";
+  exit();
+}
+
+
+
 
 $query = "INSERT INTO FOOD(name,price,description,R_ID,images_path) VALUES('" . $name . "','" . $price . "','" . $description . "','" . $R_ID ."','" . $images_path . "')";
 $success = $conn->query($query);
@@ -73,7 +119,7 @@ if (!$success){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Le Cafe'</a>
+          <a class="navbar-brand" href="index.php">Foodie Deliver Mbarara</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">

@@ -10,7 +10,7 @@ header("location: customerlogin.php");
 <html>
 
   <head>
-    <title> Cart | Le Cafe' </title>
+    <title> Cart | Foodie Deliver Mbarara </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/payment.css">
@@ -52,7 +52,7 @@ header("location: customerlogin.php");
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Le Cafe'</a>
+          <a class="navbar-brand" href="index.php">Foodie Deliver Mbarara</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -168,7 +168,7 @@ $gtotal = 0;
           </div>
         </div>
         <br>
-<h1 class="text-center">Grand Total: &#8377;<?php echo "$gtotal"; ?>/-</h1>
+<h1 class="text-center">Grand Total: UGX<?php echo "$gtotal"; ?>/-</h1>
 <h5 class="text-center">including all service charges. (no delivery charges applied)</h5>
 <br>
 <h1 class="text-center">

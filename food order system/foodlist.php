@@ -11,7 +11,7 @@ header("location: customerlogin.php");
 <html>
 
   <head>
-    <title> Explore | Food Le Cafe' </title>
+    <title> Explore | Food Foodie Deliver Mbarara </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/foodlist.css">
@@ -55,7 +55,7 @@ header("location: customerlogin.php");
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Le Cafe'</a>
+          <a class="navbar-brand" href="index.php">Foodie Deliver Mbarara</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -174,7 +174,7 @@ else {
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>Welcome To Le Cafe'</h1>      
+    <h1>Welcome To Foodie Deliver Mbarara</h1>      
     <!--p>Let food be thy medicine and medicine be thy food</p-->
   </div>
 </div>
@@ -209,7 +209,7 @@ if (mysqli_num_rows($result) > 0)
 <img src="<?php echo $row["images_path"]; ?>" class="img-responsive">
 <h4 class="text-dark"><?php echo $row["name"]; ?></h4>
 <h5 class="text-info"><?php echo $row["description"]; ?></h5>
-<h5 class="text-danger">&#8377; <?php echo $row["price"]; ?>/-</h5>
+<h5 class="text-danger">UGX <?php echo number_format($row["price"],2); ?>/-</h5>
 <h5 class="text-info">Quantity: <input type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;"> </h5>
 <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>">
 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">

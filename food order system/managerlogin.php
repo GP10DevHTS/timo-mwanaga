@@ -10,7 +10,7 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
 <html>
 
   <head>
-    <title> Manager Login | Le Cafe' </title>
+    <title> Manager Login | Foodie Deliver Mbarara </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/managerlogin.css">
@@ -54,7 +54,7 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Le Cafe'</a>
+          <a class="navbar-brand" href="index.php">Foodie Deliver Mbarara</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -88,7 +88,7 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
 
     <div class="container">
     <div class="jumbotron">
-     <h1>Hi Manager,<br> Welcome to <span class="edit"> Le Cafe' </span></h1>
+     <h1>Hi Manager,<br> Welcome to <span class="edit"> Foodie Deliver Mbarara </span></h1>
      <br>
    <p>Kindly LOGIN to continue.</p>
     </div>
