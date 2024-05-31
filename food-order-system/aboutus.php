@@ -133,7 +133,7 @@ else {
     </div>
     <h3 style="color: red">About the food culture in Foodie Deliver Mbarara</h3>
     <br>
-    <h3 style="">Order food & beverages online from restaurants near & around you. <h3 style="">
+    <h3 style="color : white">Order food & beverages online from restaurants near & around you. <h3 style="color : white">
         We deliver food from your neighborhood local joints, your favorite cafes, luxurious & elite restaurants in your
         area,</h3>
       <h3 style="color : white"> and also from chains like Dominos, KFC, Burger King, Pizza Hut, FreshMenu, Mc Donald's,
